@@ -52,32 +52,31 @@ BudgetMate is a web-based budgeting application that helps users manage their in
 - **Back to Input**: Click "Back" to enter a new income amount.
 
 ## Directory Structure
+   
+   budgetmate/
+   ├── budgetmate/
+   │   ├── __init__.py
+   │   ├── settings.py
+   │   ├── urls.py
+   │   ├── wsgi.py
+   │   └── asgi.py
+   ├── budget/
+   │   ├── migrations/
+   │   ├── __init__.py
+   │   ├── admin.py
+   │   ├── apps.py
+   │   ├── models.py
+   │   ├── tests.py
+   │   ├── views.py
+   │   └── templates/
+   │       ├── budgetmate/
+   │           ├── base.html
+   │           ├── input.html
+   │           └── result.html
+   ├── manage.py
+   └── README.md
 
-```plaintext
-budgetmate/
-├── budgetmate/
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│   └── asgi.py
-├── budget/
-│   ├── migrations/
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── tests.py
-│   ├── views.py
-│   └── templates/
-│       ├── budgetmate/
-│           ├── base.html
-│           ├── input.html
-│           └── result.html
-├── manage.py
-└── README.md
-
-## Custom Filters
+ ## Custom Filters
 
 This project includes a custom Django template filter for adding CSS classes to form fields. The filter is located in `budgetmate/templatetags/custom_filters.py`.
 
