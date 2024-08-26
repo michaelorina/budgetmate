@@ -1,0 +1,28 @@
+{% extends "budgetmate/base.html" %}
+
+{% block content %}
+    <h1 class="my-4">Your Budget Breakdown</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Amount (in {{ currency }})</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Savings</td>
+                <td>{{ budget.savings }}</td>
+            </tr>
+            <tr>
+                <td>Expenses</td>
+                <td>{{ budget.expenses }}</td>
+            </tr>
+            <tr>
+                <td>Investments</td>
+                <td>{{ budget.investments }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-secondary">Back</a>
+{% endblock %}

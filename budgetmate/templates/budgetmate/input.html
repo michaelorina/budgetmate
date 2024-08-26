@@ -1,0 +1,18 @@
+{% extends "budgetmate/base.html" %}
+
+{% block content %}
+    <h1 class="my-4">Enter Your Income</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="{{ form.income.id_for_label }}">Income</label>
+            <input type="text" name="income" id="{{ form.income.id_for_label }}" class="form-control" value="{{ form.income.value }}">
+            {% if form.income.errors %}
+            <div class="invalid-feedback d-block">
+                {{ form.income.errors.as_text }}
+            </div>
+            {% endif %}
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate Budget</button>
+    </form>
+{% endblock %}
